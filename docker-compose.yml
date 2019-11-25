@@ -1,0 +1,36 @@
+version: '2.1'
+
+services:
+  sv1:
+    image: im-test1
+    # environment: {
+    #   NODE_ENV SERVER_NAME server_1
+    #   ADD .$SERVER_NAME
+    # }
+    build: .
+
+    ports:
+      - 8001:3000
+    restart: always
+  sv2:
+    image: im-test2
+    # environment: {
+    #   NODE_ENV SERVER_NAME server_2
+    #   ADD .$SERVER_NAME
+    # }
+    build: .
+    
+    ports:
+      - 8002:3000
+    restart: always
+  sv3:
+    image: im-test3
+    # environment: {
+    #   NODE_ENV SERVER_NAME server_5
+    #   ADD .$SERVER_NAME
+    # }
+    build: .
+    
+    ports:
+      - 8003:3000
+    restart: always
